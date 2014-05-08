@@ -7,7 +7,7 @@
 <div class="container">
   <div class="main">
   <!-- svg start -->
-<svg width="1024px" height="768px" style="width: 1024px; height: 768px" viewBox="0 0 1024 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="1024px" height="768px" viewBox="0 0 1024 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
     <title>hanzi</title>
     <desc>Created with Sketch.</desc>
@@ -51,9 +51,10 @@
             </g>
             <g id="lai-meaning" sketch:type="MSLayerGroup" transform="translate(153.000000, 134.650943)">
                 <text id="lai-p" sketch:type="MSTextLayer" font-family="Open Sans" font-size="16" font-weight="260" fill="#4A4A4A">
-                    <tspan x="0" y="465">Just as Moses lifted up the snake in the wilderness, so the Son of Man must be lifted up, that </tspan>
-                    <tspan x="0" y="487">everyone who believes may have eternal life in him.” - </tspan>
-                    <tspan x="384.734375" y="487" font-weight="bold">John3:14-15</tspan>
+                    <tspan x="0" y="465">On the last and greatest day of the festival, Jesus stood and said in a loud voice, “Let anyone who is </tspan>
+                    <tspan x="0" y="487">thirsty come to me and drink. Whoever believes in me, as Scripture has said, rivers of living water will </tspan>
+                    <tspan x="0" y="509">flow from within them.” - </tspan>
+                    <tspan x="178.515625" y="509" font-weight="bold">John 7:37-38</tspan>
                 </text>
                 <text id="lai-title" sketch:type="MSTextLayer" font-family="Open Sans" font-size="36" font-weight="bold" fill="#4A4A4A">
                     <tspan x="128.172963" y="436">come</tspan>
@@ -109,15 +110,19 @@
                 </text>
             </g>
             <g id="duo-zi" sketch:type="MSLayerGroup" transform="translate(209.000000, 198.611111)"></g>
-            <g id="zui-meaning" sketch:type="MSLayerGroup" transform="translate(162.000000, 158.150943)" font-size="36" font-family="Open Sans" fill="#4A4A4A">
-                <text id="zui-title" sketch:type="MSTextLayer" font-weight="bold">
-                    <tspan x="113.5" y="399">Sin</tspan>
+            <g id="zui-meaning" sketch:type="MSLayerGroup" transform="translate(153.000000, 158.150943)" font-family="Open Sans" fill="#4A4A4A">
+                <text id="zui-p" sketch:type="MSTextLayer" font-size="16" font-weight="260">
+                    <tspan x="0" y="427">Everyone who sins breaks the law; in fact, sin is lawlessness. -</tspan>
+                    <tspan x="436.460938" y="427" font-weight="bold">1 John 3:4</tspan>
                 </text>
-                <text id="zui-text-2" sketch:type="MSTextLayer" font-weight="260">
-                    <tspan x="486" y="156">broken wings</tspan>
+                <text id="zui-title" sketch:type="MSTextLayer" font-size="36" font-weight="bold">
+                    <tspan x="122.5" y="391">Sin</tspan>
                 </text>
-                <text id="zui-text-1" sketch:type="MSTextLayer" font-weight="260">
-                    <tspan x="486" y="39">net</tspan>
+                <text id="zui-text-2" sketch:type="MSTextLayer" font-size="36" font-weight="260">
+                    <tspan x="495" y="156">broken wings</tspan>
+                </text>
+                <text id="zui-text-1" sketch:type="MSTextLayer" font-size="36" font-weight="260">
+                    <tspan x="495" y="39">net</tspan>
                 </text>
             </g>
             <g id="zui-zi" sketch:type="MSLayerGroup" transform="translate(182.000000, 160.169492)"></g>
@@ -145,8 +150,8 @@
                     <tspan x="0.5" y="424.5">The Lord God took the man and put him in the Garden of Eden to work it and take care of it. And </tspan>
                     <tspan x="0.5" y="446.5">the Lord God commanded the man, “You are free to eat from any tree in the garden; but you must </tspan>
                     <tspan x="0.5" y="468.5">not eat from the tree of the knowledge of good and evil, for when you eat from it you will certainly </tspan>
-                    <tspan x="0.5" y="490.5">die.”  -</tspan>
-                    <tspan x="44.484375" y="490.5" font-weight="bold">Genesis 2:15-17</tspan>
+                    <tspan x="0.5" y="490.5">die.”  - </tspan>
+                    <tspan x="48.640625" y="490.5" font-weight="bold">Genesis 2:15-17</tspan>
                 </text>
                 <text id="jin-title" sketch:type="MSTextLayer" font-size="36" font-weight="bold">
                     <tspan x="89.5" y="366">forbidden</tspan>
@@ -188,22 +193,23 @@
                     <path d="M167.06485,68.986646 C170.979919,69.2575972 173.695314,64.9402664 174.305313,61.8592315 C175.182791,57.4271867 170.2888,53.8336488 166.432542,57.2587628 C161.140582,54.1345068 158.739746,57.3840523 159.436386,61.4899502 C160.070454,65.2270525 163.149781,68.7156948 167.06485,68.986646 Z" id="fruit-a1" transform="translate(166.863582, 62.447763) rotate(-10.000000) translate(-166.863582, -62.447763) "></path>
                 </g>
             </g>
-            <g id="tian-meaning" sketch:type="MSLayerGroup" transform="translate(164.000000, 146.150943)">
-                <text id="tian-p" sketch:type="MSTextLayer" font-family="Open Sans" font-size="16" font-weight="260" sketch:alignment="middle" fill="#4A4A4A">
-                    <tspan x="201.195313" y="429">The bigest one</tspan>
+            <g id="tian-meaning" sketch:type="MSLayerGroup" transform="translate(153.000000, 146.150943)">
+                <text id="tian-p" sketch:type="MSTextLayer" font-family="Open Sans" font-size="16" font-weight="260" fill="#4A4A4A">
+                    <tspan x="0" y="439">For you, Lord, are the Most High over all the earth; you are exalted far above all gods. - </tspan>
+                    <tspan x="620.664062" y="439" font-weight="bold">Psalm 97:9</tspan>
                 </text>
                 <text id="tian-title" sketch:type="MSTextLayer" font-family="Open Sans" font-size="36" font-weight="bold" fill="#4A4A4A">
-                    <tspan x="177" y="399">God, Sky</tspan>
+                    <tspan x="151.5" y="399">God, Heaven</tspan>
                 </text>
                 <text id="tian-text-2" sketch:type="MSTextLayer" font-family="Open Sans" font-size="36" font-weight="260" fill="#4A4A4A">
-                    <tspan x="633" y="156">big</tspan>
+                    <tspan x="644" y="156">big</tspan>
                 </text>
                 <text id="tian-text-1" sketch:type="MSTextLayer" font-family="Open Sans" font-size="36" font-weight="260" fill="#4A4A4A">
-                    <tspan x="633" y="39">one</tspan>
+                    <tspan x="644" y="39">one</tspan>
                 </text>
-                <path d="M113.345926,340.348036 L113.345926,344.348036" id="line-4" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
-                <path d="M361.482759,145.5 L365.482759,145.5" id="line-2" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
-                <path d="M344.5,25.5 L348.5,25.5" id="line-1" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
+                <path d="M124.345926,340.348036 L124.345926,344.348036" id="line-4" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
+                <path d="M372.482759,145.5 L376.482759,145.5" id="line-2" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
+                <path d="M355.5,25.5 L359.5,25.5" id="line-1" stroke="#4A4A4A" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1,4" sketch:type="MSShapeGroup"></path>
             </g>
             <g id="tian-zi" sketch:type="MSLayerGroup" transform="translate(293.000000, 156.000000)" fill="#000000">
                 <path d="M121,19.5 C122.439259,19.5 123,18.6045695 123,17.5 C123,16.3954305 122.440263,15.5 121,15.5 C119.559737,15.5 119,16.3954305 119,17.5 C119,18.6045695 119.560741,19.5 121,19.5 Z" id="frame-4" sketch:type="MSShapeGroup" transform="translate(121.000000, 17.500000) scale(-1, 1) translate(-121.000000, -17.500000) "></path>
@@ -259,6 +265,7 @@
   </div>
 </div>
 <div id="restart">Restart</div>
+<div id="toggle"><span class="icon-play"></span></div>
 
 <?php include 'part/footer.php'; ?>
 </body>

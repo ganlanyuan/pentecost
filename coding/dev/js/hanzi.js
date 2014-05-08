@@ -100,7 +100,7 @@ ready(function(){
     abc = "";
 
   function pathMorph (path, data, dur) {
-    path.animate({d: data}, dur, mina.easeOut);
+    path.animate({d: data}, dur, mina.ease);
   }
 
   var hanzi = new TimelineLite(),
@@ -126,7 +126,7 @@ ready(function(){
     .fromTo('#tian-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:0, y:0}, 'tian-line-4')
     .call(pathMorph, [snapL4, tianLD4, 500], this, 'tian-line-4')
-    .fromTo('#tian-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#tian-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#tian-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0, delay:2})
     ;
@@ -158,7 +158,7 @@ ready(function(){
     .fromTo('#jin-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'10', y:'-20'}, 'jin-line-4')
     .call(pathMorph, [snapL4, jinLD4, 500], this, 'jin-line-4')
-    .fromTo('#jin-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#jin-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#jin-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', '#jin-dash path', '#jin-letter1', '#jin-letter2', '#jin-letter3'], .5, {opacity:0, x:0, y:0, delay:3})
     ;
@@ -190,7 +190,7 @@ ready(function(){
     .fromTo('#lan-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'-90', y:'-7'}, 'lan-line-4')
     .call(pathMorph, [snapL4, lanLD4, 500], this, 'lan-line-4')
-    .fromTo('#lan-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#lan-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#lan-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#frame-3', '#line-1', '#line-2', '#line-3', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', ], .5, {opacity:0, x:0, y:0, delay:3})
     ;
@@ -213,7 +213,8 @@ ready(function(){
     .fromTo('#zui-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'0', y:'0'}, 'zui-line-4')
     .call(pathMorph, [snapL4, zuiLD4, 500], 'zui-line-4')
-    .fromTo('#zui-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#zui-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#zui-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title', '#zui-p'], .5, {opacity:0, x:0, y:0, delay:3})
     ;
   duo
@@ -243,7 +244,7 @@ ready(function(){
     .fromTo('#duo-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'10', y:'-50'}, 'duo-line-4')
     .call(pathMorph, [snapL4, duoLD4, 500], 'duo-line-4')
-    .fromTo('#duo-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#duo-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#duo-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p', '#fruit-c path', '#duo-man-line2'], .5, {opacity:0, x:0, y:0, delay:3})
     ;
@@ -271,19 +272,19 @@ ready(function(){
     .fromTo('#yi-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'37', y:'-22'}, 'yi-line-4')
     .call(pathMorph, [snapL4, yiLD4, 500], 'yi-line-4')
-    .fromTo('#yi-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#yi-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#yi-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0, x:0, y:0, delay:3})
     ;
   lai
-    .to('#frame-1', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA')
-    .call(pathMorph, [snapF1, laiFaD1, 500], this, 'laiFrameA')
-    .to('#frame-2', .5, {opacity:1, fill:'#d8d8d8', opacity:1, x:'-80', y:'0'}, 'laiFrameA')
-    .call(pathMorph, [snapF2, laiFaD2, 500], this, 'laiFrameA')
-    .to('#frame-3', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA')
-    .call(pathMorph, [snapF3, laiFaD3, 500], this, 'laiFrameA')
-    .to('#frame-4', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:-80, y:0}, 'laiFrameA')
-    .call(pathMorph, [snapF4, laiFaD4, 500], this, 'laiFrameA')
+    .to('#frame-1', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA1')
+    .call(pathMorph, [snapF1, laiFaD1, 500], this, 'laiFrameA1')
+    .to('#frame-2', .5, {opacity:1, fill:'#d8d8d8', opacity:1, x:'-80', y:'0'}, 'laiFrameA2')
+    .call(pathMorph, [snapF2, laiFaD2, 500], this, 'laiFrameA2')
+    .to('#frame-3', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA3')
+    .call(pathMorph, [snapF3, laiFaD3, 500], this, 'laiFrameA3')
+    .to('#frame-4', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:-80, y:0}, 'laiFrameA4')
+    .call(pathMorph, [snapF4, laiFaD4, 500], this, 'laiFrameA4')
     .staggerTo(['#cross-1', '#cross-3'], 0.5, {opacity:1, x:'0', y:'11'}, .2)
     .staggerTo(['#cross-1', '#cross-3'], 0.5, {opacity:0, delay: .8})
     .to('#frame-1', .5, {fill:'#000', x:'-50', y:'-50'}, 'laiFrameB')
@@ -304,7 +305,7 @@ ready(function(){
     .fromTo('#lai-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'-20', y:'-15'}, 'lai-line-4')
     .call(pathMorph, [snapL4, laiLD4, 500], 'lai-line-4')
-    .fromTo('#lai-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#lai-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#lai-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p', '#cross-1', '#cross-3', '#line-3'], .5, {opacity:0, x:0, y:0, delay:3})
     ;
@@ -339,7 +340,7 @@ ready(function(){
     .call(pathMorph, [snapL2, chuanLD2, 500], 'chuan-line-2')
     .fromTo('#chuan-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'-50', y:'-65'}, 'chuan-line-4')
-    .fromTo('#chuan-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#chuan-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#chuan-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     // .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p'], .5, {opacity:0, x:0, y:0, delay: 3})
     // .to('#restart', .5, {opacity:1})
