@@ -1,0 +1,38 @@
+// *** buttons *** //
+@import '../color/contrast';
+
+
+%button-style {
+	display: inline-block;
+	// line-height: normal !important;
+	cursor: pointer;
+	box-sizing: border-box;
+	@extend %hover-tdn;
+	@extend %global-transition;
+}
+@mixin button (
+  $font-size: null,
+  $padding: null,
+  $background-color: null, 
+  $border: null, 
+  $border-radius: null
+){
+	@extend %button-style;
+	@if $font-size != null {
+		font-size: rem($font-size);
+	}
+	@if $padding != null {
+		padding: $padding;
+	}
+	@if $background-color != null {
+		background-color: $background-color;
+		color: contrast($background-color);
+		&:hover { background-color: analogous($background-color, 10%); }
+	}
+	@if $border != null {
+		border: $border;
+	}
+	@if $border-radius != null {
+		border-radius: $border-radius;
+	}
+}

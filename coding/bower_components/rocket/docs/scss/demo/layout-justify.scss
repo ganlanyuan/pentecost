@@ -1,0 +1,24 @@
+@import 'demo-base';
+@import "../../../src/scss/layout/base/base";
+@import "../../../src/scss/addons/button";
+@import "../../../src/scss/layout/justify";
+
+// *** layout: justify *** //
+
+.example-justify {
+  @include justify-flex();
+  .no-flexbox & { @include justify(li); }
+  a {
+    display: block;
+    @extend %hover-tdn;
+    @extend %global-transition;
+    &:hover { padding: 0 20px; }
+  }
+  input {
+    width: 150px;
+    @include button(14px,5px 10px,null,1px solid #dbdbdb, 3px);
+    @extend %global-transition;
+    &:focus { width: 250px; }
+  }
+}
+

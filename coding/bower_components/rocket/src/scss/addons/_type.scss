@@ -1,0 +1,25 @@
+// *** type *** //
+
+@mixin type(
+  $font-size: null,
+  $font-weight: null,
+  $font-style: null,
+  $line-height: null,
+  $font-family: null
+){
+  @if $font-size != null {
+    font-size: rem($font-size);
+  }
+  @if $font-weight != null {
+    font-weight: $font-weight;
+  }
+  @if $font-style != null {
+    font-style: $font-style;
+  }
+  @if $line-height != null {
+    line-height: $line-height;
+  }
+  @if $font-family != null {
+    font-family: $font-family;
+  }
+}

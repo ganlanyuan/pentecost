@@ -1,0 +1,46 @@
+{
+  "name": "rocket",
+  "version": "1.1.4",
+  "main": [
+    "./src/scss/rocket.scss",
+    "./src/js/kit.js",
+    "./src/icon-font/",
+    "./dist/kit.min.js"
+  ],
+  "keywords": [
+    "css",
+    "mixins",
+    "scss",
+    "sass",
+    "grid",
+    "color",
+    "type",
+    "breakpoint"
+  ],
+  "authors": [
+    "William Lin <ganlanyuan@gmail.com>"
+  ],
+  "description": "Rocket is a powerful tool to help web developer handle layout and other components easily.",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    ".gitignore",
+    ".sublime-project",
+    ".codekit",
+    "sftp-config.json",
+    "bower.json",
+    "README.md",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "homepage": "http://designdev.christianpost.com/develop/rocket/docs/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ganlanyuan/rocket.git"
+  },
+  "dependencies": {
+    "bourbon": "4.2.2"
+  }
+}

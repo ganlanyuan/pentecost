@@ -1,0 +1,12 @@
+// *** adjacent *** //
+
+@function adjacent(
+  $color,
+  $order,
+  $saturation: null,
+  $lightness: null,
+  $dist: 30
+){
+  @return color(adjacent, $color, $order, $saturation, $lightness, $dist);
+}
+

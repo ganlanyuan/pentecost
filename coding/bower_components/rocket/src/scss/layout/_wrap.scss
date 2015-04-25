@@ -1,0 +1,7 @@
+@mixin wrap(
+  $gutter: map-get($layout, gutter),
+  $columns: map-get($layout, columns)
+){
+  @at-root (without: media) { @extend %layout-wrap; }
+  margin: 0 (-$gutter / 2);
+}

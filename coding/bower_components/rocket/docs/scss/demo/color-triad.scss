@@ -1,0 +1,15 @@
+@import 'demo-base';
+@import "../../../src/scss/color/contrast";
+@import "../../../src/scss/color/core";
+@import "../../../src/scss/color/triad";
+
+// *** color: triad *** //
+
+.color-box-triad-1 { 
+  background-color: triad($original, 1); 
+  color: contrast(triad($original, 1));
+}
+.color-box-triad-2 { 
+  background-color: triad($original, 2);
+  color: contrast(triad($original, 2));
+}

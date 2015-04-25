@@ -1,0 +1,25 @@
+@import 'demo-base';
+@import "../../../src/scss/addons/media";
+
+// *** addons: media list *** //
+
+.news-left > li { 
+  @include media(15px, 'figure', 'div', left); 
+  p { 
+    margin-top: 0; 
+    max-width: none;
+  }
+}
+.news-right > li { 
+  @include media(15px, 'figure', 'div', right); 
+  p { 
+    margin-top: 0; 
+    max-width: none;
+  }
+}
+.news-left,
+.news-right { 
+  max-width: 900px;
+  margin: 0 auto;
+}
+
