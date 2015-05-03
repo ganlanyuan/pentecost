@@ -1,0 +1,43 @@
+// index
+//-----------------------------
+//common style
+
+// common style
+html { font-family: $ff-o; }
+body { background-color: #f1eee9; }
+svg { width: 100%; height: auto; }
+.container {
+  @include container(em(1024), em(20));
+}
+
+// hide elements
+// #frame-1,
+// #frame-2,
+#frame-3,
+#frame-4,
+#line-1,
+#line-2,
+#line-3,
+#line-4,
+[id^='jin-'],
+[id^='lan-'],
+[id^='zui-'],
+[id^='duo-'],
+[id^='yi-'],
+[id^='lai-'],
+[id^='chuan-']
+{ opacity: 0; }
+
+#txtContainer {
+	position: absolute;
+	left: 65px;
+	top: 14px;
+}
+.txt {
+	font: 36px monospace;
+	position: absolute;
+	color: #afafaf;
+	font-weight: bold;
+	left: 0px;
+	top: 0;
+}

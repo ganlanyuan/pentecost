@@ -6,8 +6,8 @@
 *.swp
 
 /.codekit-cache/
-/bower_components/
-/node_modules/
+/coding/bower_components/
+/coding/node_modules/
 
 README.html
 changelog.html

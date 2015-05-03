@@ -1,7 +1,3 @@
-<?php
-  $file = basename($_SERVER['PHP_SELF']);
-  $pagename = str_replace(".php","",$file); 
-?>
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"><![endif]-->
@@ -12,7 +8,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<!-- <meta http-equiv="cleartype" content="on"> -->
-	<title>Site Title</title>
+	<title>Hanzi</title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="HandheldFriendly" content="True">
@@ -34,7 +30,8 @@
 
 	<!-- css -->
 	<link href="https://fontastic.s3.amazonaws.com/MSJHPuJFXkve8cKEDAVMKT/icons.css" rel="stylesheet">
-	<link rel="stylesheet" href="assets/css/site.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'> 
+	<link rel="stylesheet" href="assets/css/hanzi.css">
 
 	<!-- javascript -->
 	<!--[if (lt IE 9)]>
@@ -45,14 +42,6 @@
 		<link href="assets/cross-domain/respond.proxy.gif" id="respond-redirect" rel="respond-redirect" />
 		<script src="assets/cross-domain/respond.proxy.js"></script>	
 	<![endif]-->
-	<?php 
-		if ($pagename == 'index') {
-			echo '';
-		} else {
-			echo '';
-		}
-	?>
-	<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> -->
-	<script src="assets/js/script.min.js"></script>
-  <?php include_once("svg-ajax.php") ?>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="assets/js/hanzi.min.js"></script>
 </head>
