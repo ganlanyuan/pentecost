@@ -5,7 +5,6 @@
     <desc>Created with Sketch.</desc>
     <defs>
         <path id="path-1" d="M136.294922,132.564453 C147.574219,132.564453 175.744141,143.921875 192.609375,161.332031 C209.474609,178.742188 221.072266,208.665039 267.980469,224.976563 C314.775942,241.248886 405.400882,237.9517 423.764648,236.450195 C583.803711,224.976563 634.369141,153.960938 634.369141,144.724609 C626.038329,120.185696 573.65625,27.2304688 408.894531,27.2304688 C400.483549,27.2304688 36.9765625,0.2265625 36.9765625,0.2265625 L0.671875,96.1445313 L114.119141,100.209961 L136.294922,132.564453 Z"></path>
-        <path id="path-3" d="M401.162072,473.041002 C339.057934,480.21708 354.673822,516.37697 347.191208,537.63137 C268.41382,526.053221 176.347941,503.684151 115.99505,455.360354 C-0.483519465,362.097432 -38.0167118,228.160962 47.8771782,97.879032 C155.496696,-65.3558443 347.266222,2.81939659 401.162058,116.825852 C455.057894,230.832308 418.216118,366.799971 461.596032,430.887895 C468.022896,440.382714 475.445175,448.919586 483.475923,456.583931 C468.312493,465.47069 435.390618,469.085924 401.162072,473.041002 Z"></path>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
         <g id="hanzi" sketch:type="MSArtboardGroup">
@@ -165,64 +164,7 @@
                 </text>
             </g>
             <g id="zui-zi" sketch:type="MSLayerGroup" transform="translate(182.000000, 160.169492)"></g>
-            <g id="zui-shape" sketch:type="MSLayerGroup" transform="translate(206.500000, 86.000000)">
-                <g id="net" transform="translate(0.000000, 0.830508)">
-                    <path d="M496.301332,554.131744 C467.074813,545.211592 232.47362,548.623275 115.99505,455.360354 C-0.483519465,362.097432 -38.0167118,228.160962 47.8771782,97.879032 C155.496696,-65.3558443 347.266222,2.81939659 401.162058,116.825852 C455.057894,230.832308 418.216118,366.799971 461.596032,430.887895 C509.102977,501.072947 611,518.91518 611,518.91518" id="Path-476" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup"></path>
-                    <mask id="mask-4" sketch:name="Mask" fill="white">
-                        <use xlink:href="#path-3"></use>
-                    </mask>
-                    <use id="Mask" sketch:type="MSShapeGroup" xlink:href="#path-3"></use>
-                    <path d="M371.941886,-8.0390625 C-41.190821,137.798488 159.304051,394.194752 110.760623,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M330.369192,-8.0390625 C-82.763515,137.798488 117.731357,394.194752 69.1879295,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M288.796498,-8.0390625 C-124.336209,137.798488 76.1586634,394.194752 27.6152355,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M226.437457,-8.0390625 C-186.69525,137.798488 13.7996224,394.194752 -34.7438055,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M184.864763,-8.0390625 C-228.267944,137.798488 -27.7730716,394.194752 -76.3164995,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M413.51458,-8.0390625 C0.381873045,137.798488 200.876745,394.194752 152.333317,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M455.087274,-8.0390625 C41.954567,137.798488 242.449439,394.194752 193.906011,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M496.659968,-8.0390625 C83.527261,137.798488 284.022133,394.194752 235.478705,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M538.232662,-8.0390625 C125.099955,137.798488 325.594827,394.194752 277.051399,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M579.805356,-8.0390625 C166.672649,137.798488 367.167521,394.194752 318.624093,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M621.37805,-8.0390625 C208.245343,137.798488 408.740215,394.194752 360.196787,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M662.950744,-8.0390625 C249.818037,137.798488 450.312909,394.194752 401.769481,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M704.523438,-8.0390625 C291.390731,137.798488 491.885603,394.194752 443.342175,528.688482" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)"></path>
-                    <path d="M351.523437,21.9609375 C-45.9804688,162.625 146.929687,409.925781 100.222656,539.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 280.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -280.804688) "></g>
-                    </path>
-                    <path d="M351.523437,61.9609375 C-45.9804688,202.625 146.929687,449.925781 100.222656,579.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 320.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -320.804688) "></g>
-                    </path>
-                    <path d="M351.523437,101.960938 C-45.9804688,242.625 146.929687,489.925781 100.222656,619.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 360.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -360.804688) "></g>
-                    </path>
-                    <path d="M351.523437,141.960938 C-45.9804688,282.625 146.929687,529.925781 100.222656,659.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 400.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -400.804688) "></g>
-                    </path>
-                    <path d="M351.523437,181.960938 C-45.9804688,322.625 146.929687,569.925781 100.222656,699.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 440.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -440.804688) "></g>
-                    </path>
-                    <path d="M351.523437,221.960938 C-45.9804688,362.625 146.929687,609.925781 100.222656,739.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 480.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -480.804688) "></g>
-                    </path>
-                    <path d="M351.523437,261.960938 C-45.9804688,402.625 146.929687,649.925781 100.222656,779.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 520.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -520.804688) "></g>
-                    </path>
-                    <path d="M351.523437,301.960938 C-45.9804688,442.625 146.929687,689.925781 100.222656,819.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 560.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -560.804688) "></g>
-                    </path>
-                    <path d="M351.523437,341.960938 C-45.9804688,482.625 146.929687,729.925781 100.222656,859.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 600.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -600.804688) "></g>
-                    </path>
-                    <path d="M351.523437,-18.0390625 C-45.9804688,122.625 146.929687,369.925781 100.222656,499.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 240.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -240.804688) "></g>
-                    </path>
-                    <path d="M351.523437,-58.0390625 C-45.9804688,82.625 146.929687,329.925781 100.222656,459.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 200.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -200.804688) "></g>
-                    </path>
-                    <path d="M351.523437,-98.0390625 C-45.9804688,42.625 146.929687,289.925781 100.222656,419.648438" id="path" stroke="#FFFFFF" stroke-width="7" sketch:type="MSShapeGroup" mask="url(#mask-4)">
-                        <g transform="translate(222.432779, 160.804688) scale(-1, 1) rotate(71.000000) translate(-222.432779, -160.804688) "></g>
-                    </path>
-                </g>
-            </g>
+            <g id="zui-shape" sketch:type="MSLayerGroup" transform="translate(203.500000, 84.000000)"></g>
             <g id="lan-meaning" sketch:type="MSLayerGroup" transform="translate(135.000000, 135.650943)" font-family="Open Sans" fill="#4A4A4A">
                 <text id="lan-p" sketch:type="MSTextLayer" font-size="16" font-weight="260">
                     <tspan x="0.5" y="435">When the woman saw that the fruit of the tree was good for food and pleasing to the eye, and also </tspan>
@@ -240,6 +182,7 @@
                 </text>
             </g>
             <g id="lan-zi" sketch:type="MSLayerGroup" transform="translate(215.000000, 128.500000)"></g>
+            <g id="lan-shape" sketch:type="MSLayerGroup" transform="translate(228.000000, 99.000000)"></g>
             <g id="jin-meaning" sketch:type="MSLayerGroup" transform="translate(152.500000, 131.150943)" font-family="Open Sans" fill="#4A4A4A">
                 <text id="jin-p" sketch:type="MSTextLayer" font-size="16" font-weight="260">
                     <tspan x="0.5" y="424.5">The Lord God took the man and put him in the Garden of Eden to work it and take care of it. And </tspan>
