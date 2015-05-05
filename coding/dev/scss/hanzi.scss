@@ -16,7 +16,76 @@
 
 // individual pages
 @import "common";
-@import "hanzi-index";
 
 // media query
 @import "mq";
+
+// common style
+html { font-family: $ff-o; }
+body { background-color: #f1eee9; }
+svg { width: 100%; height: auto; }
+.container {
+  @include container(em(1024), em(20));
+}
+
+// hide elements
+// #frame-1,
+// #frame-2,
+#frame-3,
+#frame-4,
+#line-1,
+#line-2,
+#line-3,
+#line-4,
+// #tian-text-1,
+// #tian-text-2,
+// #tian-title,
+// #tian-p,
+#leaves-1,
+#leaves-2,
+#fruit-a path,
+#fruit-b path,
+#fruit-c path,
+#jin-dash path,
+#jin-letter1,
+#jin-letter2,
+#jin-letter3,
+// #jin-text-1,
+// #jin-text-2,
+// #jin-title,
+// #jin-p,
+// #lan-text-1,
+// #lan-text-2,
+// #lan-title,
+// #lan-p,
+// #zui-text-1,
+// #zui-text-2,
+// #zui-title,
+// #zui-p,
+#duo-man-line2,
+// #duo-text-1,
+// #duo-text-2,
+// #duo-title,
+// #duo-p,
+#cross-1,
+#cross-3,
+// #lai-text-1,
+// #lai-text-2,
+// #lai-title,
+// #lai-p,
+[id^='chuan-']
+{ opacity: 0; }
+
+#txtContainer {
+	position: absolute;
+	left: 65px;
+	top: 14px;
+}
+.txt {
+	font: 36px monospace;
+	position: absolute;
+	color: #afafaf;
+	font-weight: bold;
+	left: 0px;
+	top: 0;
+}
