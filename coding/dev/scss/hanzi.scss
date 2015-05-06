@@ -25,7 +25,7 @@ html { font-family: $ff-o; }
 body { background-color: #f1eee9; }
 svg { width: 100%; height: auto; }
 .container {
-  @include container(em(1024), em(20));
+  // @include container(em(1200), em(20));
 }
 
 // hide elements
@@ -69,11 +69,25 @@ svg { width: 100%; height: auto; }
 // #duo-p,
 #cross-1,
 #cross-3,
+// #yi-text-1,
+// #yi-text-2,
+// #yi-title,
+// #yi-p,
 // #lai-text-1,
 // #lai-text-2,
 // #lai-title,
 // #lai-p,
-[id^='chuan-']
+#sea-f,
+#sea-b,
+#wave-r path,
+#wave-l path,
+#animals path,
+#ship path,
+// #chuan-text-1,
+// #chuan-text-2,
+// #chuan-title,
+// #chuan-p,
+// [id^='chuan-']
 { opacity: 0; }
 
 #txtContainer {
