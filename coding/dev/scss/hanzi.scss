@@ -27,10 +27,34 @@ svg { width: 100%; height: auto; }
 .container {
   // @include container(em(1200), em(20));
 }
-
+.nav {
+  li {
+    @extend %global-transition;
+    position: fixed;
+    top: 50%;
+    margin-top: -20px;
+    font-size: 40px;
+    padding: .4em;
+    color: #cfc0bc;
+    cursor: pointer;
+    &:hover { color: #9f938c; }
+  }
+  .next { right: 0; }
+}
+.pagination {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  span {
+    display: inline-block;
+    padding: .5em;
+    cursor: pointer;
+  }
+}
 // hide elements
-// #frame-1,
-// #frame-2,
+#frame-1,
+#frame-2,
 #frame-3,
 #frame-4,
 #line-1,

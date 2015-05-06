@@ -103,22 +103,22 @@ ready(function(){
   }
 
   var tian = new TimelineMax(),
-      jin = new TimelineMax(),
-      lan = new TimelineMax(),
-      zui = new TimelineMax(),
-      duo = new TimelineMax(),
-      yi = new TimelineMax(),
-      lai = new TimelineMax(),
-      chuan = new TimelineMax(),
-      hanzi = new TimelineMax();
+      jin = new TimelineMax( {paused:true} ),
+      lan = new TimelineMax( {paused:true} ),
+      zui = new TimelineMax( {paused:true} ),
+      duo = new TimelineMax( {paused:true} ),
+      yi = new TimelineMax( {paused:true} ),
+      lai = new TimelineMax( {paused:true} ),
+      chuan = new TimelineMax( {paused:true} ),
+      hanzi = new TimelineMax( {paused:true} );
 
   tian
-    .from('#frame-1', .5, {y:'+200', opacity:0, scale:0}, 'tian-frame-1')
+    .fromTo('#frame-1', .5, {opacity:0, scale:0}, {opacity:1, scale:1}, 'tian-frame-1')
     .call(pathMorph, [snapF1, tianFD1, 500], this, 'tian-frame-1')
     .to('#line-1', .5, {opacity:1}, 'tian-line-1')
     .call(pathMorph, [snapL1, tianLD1, 500], this, 'tian-line-1')
     .from('#tian-text-1', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#frame-2', .5, {opacity: 0, scale:50, y:'-1000'}, 'tian-frame-2')
+    .fromTo('#frame-2', .5, {opacity: 0, scale:50, y:-1000}, {opacity: 1, scale:1, y:0}, 'tian-frame-2')
     .call(pathMorph, [snapF2, tianFD2, 500], this, 'tian-frame-2')
     .to('#line-2', .5, {opacity:1}, 'tian-line-2')
     .call(pathMorph, [snapL2, tianLD2, 500], this, 'tian-line-2')
@@ -127,7 +127,6 @@ ready(function(){
     .call(pathMorph, [snapL4, tianLD4, 500], this, 'tian-line-4')
     .from('#tian-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#tian-p', 1.2, {opacity:0})
-    .to(['#line-1', '#line-2', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0})
     ;
   jin
     .to('#frame-1', .5, {fill:'#EAA739', x:'-180', y:'-120'}, 'jin-frame-a')
@@ -159,7 +158,6 @@ ready(function(){
     .call(pathMorph, [snapL4, jinLD4, 500], this, 'jin-line-4')
     .from('#jin-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#jin-p', 1.2, {opacity:0, x:-20, rotationX:-120})
-    .to(['#line-1', '#line-2', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p', '#jin-letter1', '#jin-letter2', '#jin-letter3'], .5, {opacity:0, delay: 1})
     ;
   lan
     .to('#frame-1', .5, {fill:'#EAA739', x:'-180', y:'-120'}, 'lan-frame-a')
@@ -191,7 +189,6 @@ ready(function(){
     .call(pathMorph, [snapL4, lanLD4, 500], this, 'lan-line-4')
     .from('#lan-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#lan-p', 1.2, {opacity:0, x:-20, rotationX:-120})
-    .to(['#frame-3', '#line-1', '#line-2', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p'], .5, {opacity:0, delay: 1})
     ;
   zui
     .to('#frame-1', .5, {fill:'#fff', x:'-30', y:'0'}, 'zuiFrameA')
@@ -213,7 +210,6 @@ ready(function(){
     .to('#line-4', .5, {opacity:1, x:'0', y:'0'}, 'zui-line-4')
     .call(pathMorph, [snapL4, zuiLD4, 500], 'zui-line-4')
     .from('#zui-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .to(['#line-1', '#line-2', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title'], .5, {opacity:0, delay: 1})
     ;
   duo
     .to('#frame-1', .5, {fill:'#D8D8D8', x:'0', y:'0'}, 'duoFrameA')
@@ -244,7 +240,6 @@ ready(function(){
     .call(pathMorph, [snapL4, duoLD4, 500], 'duo-line-4')
     .from('#duo-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#duo-p', .8, {opacity:0, x:-20, rotationX:-120})
-    .to(['#line-1', '#line-2', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p'], .5, {opacity:0, delay: 1})
     ;
   yi
     .to('#frame-3', .8, {fill:'#fff', x:'-50', y:'0'}, 'yiFrameA3')
@@ -272,7 +267,6 @@ ready(function(){
     .call(pathMorph, [snapL4, yiLD4, 500], 'yi-line-4')
     .from('#yi-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#yi-p', .8, {opacity:0, x:-20, rotationX:-120})
-    .to(['#frame-3', '#frame-4', '#line-1', '#line-2', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0, delay: 1})
     ;
   lai
     .to('#frame-1', .5, {fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA1')
@@ -305,7 +299,6 @@ ready(function(){
     .call(pathMorph, [snapL4, laiLD4, 500], 'lai-line-4')
     .from('#lai-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#lai-p', .8, {opacity:0, x:-20, rotationX:-120})
-    .to(['#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p'], .5, {opacity:0, delay:1})
     ;
  chuan
     .to('#frame-1', .5, {fill:'#15161E', x:'-293', y:'-4'}, 'chuanFrameA')
@@ -340,19 +333,142 @@ ready(function(){
     .to('#line-4', .5, {opacity:1, x:'-50', y:'-65'}, 'chuan-line-4')
     .from('#chuan-title', .8, {opacity:0, x:-20, rotationX:-120})
     .from('#chuan-p', .8, {opacity:0, x:-20, rotationX:-120})
-    .to(['#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p', '#frame-1', '#frame-2', '#frame-3', '#frame-4'], .5, {opacity:0, delay: 1})
     ;
 
-  hanzi
-    .add(tian)
-    .add(jin)
-    .add(lan)
-    .add(zui)
-    .add(duo)
-    .add(yi)
-    .add(lai)
-    .add(chuan)
-    ;
+  // hanzi
+  //   .add(tian)
+  //   .add(jin)
+  //   .add(lan)
+  //   .add(zui)
+  //   .add(duo)
+  //   .add(yi)
+  //   .add(lai)
+  //   .add(chuan)
+  //   ;
+
+  var countCurrent = 1,
+      countNext = 1;
+
+  function tlPause (){
+    switch(countCurrent) {
+      case 1:
+        tian.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0})
+        break;
+      case 2:
+        jin.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p'], .5, {opacity:0})
+        break;
+      case 3:
+        lan.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p'], .5, {opacity:0})
+        break;
+      case 4:
+        zui.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title', '#zui-p'], .5, {opacity:0})
+        break;
+      case 5:
+        duo.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p'], .5, {opacity:0})
+        break;
+      case 6:
+        yi.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0})
+        break;
+      case 7:
+        lai.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p'], .5, {opacity:0})
+        break;
+      case 8:
+        chuan.pause();
+        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p'], .5, {opacity:0})
+        break;
+    }
+  }
+  
+  function tlPlay (){
+    switch(countNext) {
+      case 1:
+        tian.play();
+        break;
+      case 2:
+        jin.play();
+        break;
+      case 3:
+        lan.play();
+        break;
+      case 4:
+        zui.play();
+        break;
+      case 5:
+        duo.play();
+        break;
+      case 6:
+        yi.play();
+        break;
+      case 7:
+        lai.play();
+        break;
+      case 8:
+        chuan.play();
+        break;
+    }
+  }
+  
+  function prev(){
+    countCurrent = countNext;
+    if ( countCurrent > 1 ) {
+      countNext -= 1;
+    } else {
+      countNext = 8;
+    }
+    tlPause();
+    tlPlay();
+    var value = countCurrent + "," + countNext;
+    console.log(value);
+  }
+
+  function next() {
+    countCurrent = countNext;
+    if ( countCurrent < 8 ) {
+      countNext += 1;
+    } else {
+      countNext = 1;
+    }
+    tlPause();
+    tlPlay();
+  }
+
+  k('.next').click(function (){
+    next();
+  });
+
+  k('.prev').click(function (){
+    prev();
+  });
+
+  k('.pagination span').click(function (){
+    countNext = k.index( k('.pagination span'), k(this)[0] ) + 1;
+    tlPause();
+    tlPlay();
+  });
+
+  document.onkeydown = function(e) {
+    switch (e.keyCode) {
+      case 37:
+        prev();
+        break;
+      case 38:
+        prev();
+        break;
+      case 39:
+        next();
+        break;
+      case 40:
+        next();
+        break;
+    }
+  };
 
   // var txtContainer = $("#quote"),
 	// 	  txt;
