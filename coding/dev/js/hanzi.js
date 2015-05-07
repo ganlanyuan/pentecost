@@ -113,32 +113,33 @@ ready(function(){
       hanzi = new TimelineMax( {paused:true} );
 
   tian
-    .fromTo('#frame-1', .5, {opacity:0, scale:0}, {opacity:1, scale:1}, 'tian-frame-1')
+    .to('#frame-1', .5, {opacity:1, scale:1}, 'tian-frame-1')
     .call(pathMorph, [snapF1, tianFD1, 500], this, 'tian-frame-1')
-    .to('#line-1', .5, {opacity:1}, 'tian-line-1')
+    .to('#line-1', .5, {opacity:1, x:0, y:0}, 'tian-line-1')
     .call(pathMorph, [snapL1, tianLD1, 500], this, 'tian-line-1')
-    .from('#tian-text-1', .8, {opacity:0, x:-20, rotationX:-120})
-    .fromTo('#frame-2', .5, {opacity: 0, scale:50, y:-1000}, {opacity: 1, scale:1, y:0}, 'tian-frame-2')
+    .fromTo('#tian-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .to('#frame-2', .5, {opacity: 1, scale:1, y:0}, 'tian-frame-2')
     .call(pathMorph, [snapF2, tianFD2, 500], this, 'tian-frame-2')
-    .to('#line-2', .5, {opacity:1}, 'tian-line-2')
+    .to('#line-2', .5, {opacity:1, x:0, y:0}, 'tian-line-2')
     .call(pathMorph, [snapL2, tianLD2, 500], this, 'tian-line-2')
-    .from('#tian-text-2', .8, {opacity:0, x:-20, rotationX:-120})
-    .to('#line-4', .5, {opacity:1}, 'tian-line-4')
+    .fromTo('#tian-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .to('#line-4', .5, {opacity:1, x:0, y:0}, 'tian-line-4')
     .call(pathMorph, [snapL4, tianLD4, 500], this, 'tian-line-4')
-    .from('#tian-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#tian-p', 1.2, {opacity:0})
+    .fromTo('#tian-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#tian-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0, delay: 2})
     ;
   jin
-    .to('#frame-1', .5, {fill:'#EAA739', x:'-180', y:'-120'}, 'jin-frame-a')
+    .to('#frame-1', .5, {opacity:1, fill:'#EAA739', x:'-180', y:'-120'}, 'jin-frame-a')
     .call(pathMorph, [snapF1, jinFaD1, 500], this, 'jin-frame-a')
-    .to('#frame-2', .5, {fill:'#705033', x:'-180', y:'-120'}, 'jin-frame-a')
+    .to('#frame-2', .5, {opacity:1, fill:'#705033', x:'-180', y:'-120'}, 'jin-frame-a')
     .call(pathMorph, [snapF2, jinFaD2, 500], this, 'jin-frame-a')
     .to('#leaves-1', .5, {fill:'#2F4764', opacity:1, x:'-20', y:'+4'}, 'jin-leaves')
     .to('#leaves-2', .5, {fill:'#77AB39', opacity:1, x:'-22', y:'+4'}, 'jin-leaves')
     .staggerTo('#fruit-a path', .5, {fill:'#8D98A5', opacity:1, x:'-20', y:'+4'}, .15)
     .staggerTo('#fruit-b path', .5, {fill:'#985C26', opacity:1, x:'-22', y:'+4'}, .15)
     .staggerTo('#jin-dash path', .5, {opacity:1}, .25)
-    .to('#frame-3', .5, {fill: '#444', opacity:1, rotation:'-52deg', x:'-580', y:'+170'}, 'jin-frame-a3')
+    .to('#frame-3', .5, {opacity:1, fill: '#444', rotation:'-52deg', x:'-580', y:'+170'}, 'jin-frame-a3')
     .call(pathMorph, [snapF3, jinFaD3, 500], this, 'jin-frame-a3')
     .to(['#jin-dash', '#leaves-1', '#leaves-2', '#fruit-a path', '#fruit-b path'], .5, {opacity:0, delay: 1})
     .to('#frame-1', .5, {fill:'#000', x:'-82', y:'-72'}, 'jin-frame-b1')
@@ -150,23 +151,24 @@ ready(function(){
     .staggerTo(['#jin-letter1', '#jin-letter2', '#jin-letter3'], .5, {opacity:1, rotation:'0deg'}, .2)
     .to('#line-1', .5, {opacity:1, x:'10', y:'-16'}, 'jin-line-1')
     .call(pathMorph, [snapL1, jinLD1, 500], this, 'jin-line-1')
-    .from('#jin-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#jin-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'10', y:'-16'}, 'jin-line-2')
     .call(pathMorph, [snapL2, jinLD2, 500], this, 'jin-line-2')
-    .from('#jin-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#jin-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'10', y:'-20'}, 'jin-line-4')
     .call(pathMorph, [snapL4, jinLD4, 500], this, 'jin-line-4')
-    .from('#jin-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#jin-p', 1.2, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#jin-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#jin-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', '#jin-dash path', '#jin-letter1', '#jin-letter2', '#jin-letter3'], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
   lan
-    .to('#frame-1', .5, {fill:'#EAA739', x:'-180', y:'-120'}, 'lan-frame-a')
+    .to('#frame-1', .5, {opacity:1, fill:'#EAA739', x:'-180', y:'-120'}, 'lan-frame-a')
     .call(pathMorph, [snapF1, jinFaD1, 500], this, 'lan-frame-a')
-    .to('#frame-2', .5, {fill:'#705033', x:'-180', y:'-120'}, 'lan-frame-a')
+    .to('#frame-2', .5, {opacity:1, fill:'#705033', x:'-180', y:'-120'}, 'lan-frame-a')
     .call(pathMorph, [snapF2, jinFaD2, 500], this, 'lan-frame-a')
-    .to('#frame-3', .5, {fill: '#8F8671', opacity:1, x:'-25', y:'0', rotation:'4deg'}, 'lan-frame-a')
+    .to('#frame-3', .5, {opacity:1, fill: '#8F8671', x:'-25', y:'0', rotation:'4deg'}, 'lan-frame-a')
     .call(pathMorph, [snapF3, lanFaD3, 500], this, 'lan-frame-a')
-    .to('#frame-4', .5, {fill: '#ED5012', opacity:1, x:'-25', y:'0', rotation:'4deg'}, 'lan-frame-a')
+    .to('#frame-4', .5, {opacity:1, fill: '#ED5012', x:'-25', y:'0', rotation:'4deg'}, 'lan-frame-a')
     .call(pathMorph, [snapF4, lanFaD4, 500], this, 'lan-frame-a')
     .to('#leaves-1', .5, {fill:'#2F4764', opacity:1, x:'-20', y:'+4'}, 'lan-leaves')
     .to('#leaves-2', .5, {fill:'#77AB39', opacity:1, x:'-22', y:'+4'}, 'lan-leaves')
@@ -181,19 +183,20 @@ ready(function(){
     .call(pathMorph, [snapF3, lanFbD3, 500], this, 'lan-frame-b')
     .to('#line-1', .5, {opacity:1, x:'-90', y:'-7'}, 'lan-line-1')
     .call(pathMorph, [snapL1, lanLD1, 500], this, 'lan-line-1')
-    .from('#lan-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#lan-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'-90', y:'-7'}, 'lan-line-2')
     .call(pathMorph, [snapL2, lanLD2, 500], this, 'lan-line-2')
-    .from('#lan-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#lan-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'-90', y:'-7'}, 'lan-line-4')
     .call(pathMorph, [snapL4, lanLD4, 500], this, 'lan-line-4')
-    .from('#lan-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#lan-p', 1.2, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#lan-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#lan-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', ], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
   zui
-    .to('#frame-1', .5, {fill:'#fff', x:'-30', y:'0'}, 'zuiFrameA')
+    .to('#frame-1', .5, {opacity:1, fill:'#fff', x:'-30', y:'0'}, 'zuiFrameA')
     .call(pathMorph, [snapF1, zuiFaD1, 500], this, 'zuiFrameA')
-    .to('#frame-2', .5, {x:'-40', y:'-45'}, 'zuiFrameA')
+    .to('#frame-2', .5, {opacity:1, x:'-40', y:'-45'}, 'zuiFrameA')
     .call(pathMorph, [snapF2, zuiFaD2, 500], this, 'zuiFrameA')
     .to('#frame-1', .5, {fill:'#000', x:'-110', y:'0'}, 'zuiFrameA+=1')
     .call(pathMorph, [snapF1, zuiFbD2, 500], this, 'zuiFrameA+=1')
@@ -203,20 +206,21 @@ ready(function(){
     .call(pathMorph, [snapF3, zuiFbD3, 500], this, 'zui-frame-b3')
     .to('#line-1', .5, {opacity:1, x:'0', y:'15'}, 'zui-line-1')
     .call(pathMorph, [snapL1, zuiLD1, 500], 'zui-line-1')
-    .from('#zui-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#zui-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'0', y:'10'}, 'zui-line-2')
     .call(pathMorph, [snapL2, zuiLD2, 500], 'zui-line-2')
-    .from('#zui-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#zui-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'0', y:'0'}, 'zui-line-4')
     .call(pathMorph, [snapL4, zuiLD4, 500], 'zui-line-4')
-    .from('#zui-title', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#zui-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title', '#zui-p'], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
   duo
-    .to('#frame-1', .5, {fill:'#D8D8D8', x:'0', y:'0'}, 'duoFrameA')
+    .to('#frame-1', .5, {opacity:1, fill:'#D8D8D8', x:'0', y:'0'}, 'duoFrameA')
     .call(pathMorph, [snapF1, duoFaD1, 500], this, 'duoFrameA')
-    .to('#frame-2', .5, {fill:'#F5A623', x:'0', y:'0'}, 'duoFrameA')
+    .to('#frame-2', .5, {opacity:1, fill:'#F5A623', x:'0', y:'0'}, 'duoFrameA')
     .call(pathMorph, [snapF2, duoFaD2, 500], this, 'duoFrameA')
-    .to('#frame-3', .5, {fill:'#1e334b', opacity:1, x:'0', y:'0'}, 'duoFrameA')
+    .to('#frame-3', .5, {opacity:1, fill:'#1e334b', opacity:1, x:'0', y:'0'}, 'duoFrameA')
     .call(pathMorph, [snapF3, duoFaD3, 500], this, 'duoFrameA')
     .to('#duo-man-line2', .5, {opacity:1, x:'-20', y:'32'})
     .staggerTo('#fruit-c path', .5, {opacity:1, x:'-20', y:'32'}, .2)
@@ -228,27 +232,28 @@ ready(function(){
     .call(pathMorph, [snapF2, duoFbD2, 500], this, 'duoFrameB')
     .to('#frame-3', .5, {fill:'#000', x:'-90', y:'48'}, 'duoFrameB')
     .call(pathMorph, [snapF3, duoFbD3, 500], this, 'duoFrameB')
-    .to('#frame-4', .5, {fill:'#000', opacity:1, x:'-90', y:'48'}, 'duoFrameB')
+    .to('#frame-4', .5, {opacity:1, fill:'#000', x:'-90', y:'48'}, 'duoFrameB')
     .call(pathMorph, [snapF4, duoFbD4, 500], this, 'duoFrameB')
     .to('#line-1', .5, {opacity:1, x:'-11', y:'-34'}, 'duoLine1')
     .call(pathMorph, [snapL1, duoLD1, 500], 'duoLine1')
-    .from('#duo-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#duo-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'15', y:'-38'}, 'duo-line-2')
     .call(pathMorph, [snapL2, duoLD2, 500], 'duo-line-2')
-    .from('#duo-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#duo-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'10', y:'-50'}, 'duo-line-4')
     .call(pathMorph, [snapL4, duoLD4, 500], 'duo-line-4')
-    .from('#duo-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#duo-p', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#duo-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#duo-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p', '#fruit-c path', '#duo-man-line2'], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
   yi
-    .to('#frame-3', .8, {fill:'#fff', x:'-50', y:'0'}, 'yiFrameA3')
+    .to('#frame-3', .8, {opacity:1, fill:'#fff', x:'-50', y:'0'}, 'yiFrameA3')
     .call(pathMorph, [snapF3, yiFaD3, 800], this, 'yiFrameA3')
-    .to('#frame-1', .3, {fill:'#D0021B', opacity:1, x:'320', y:'160'}, 'yiFrameA1')
+    .to('#frame-1', .3, {opacity:1, fill:'#D0021B', opacity:1, x:'320', y:'160'}, 'yiFrameA1')
     .call(pathMorph, [snapF1, yiFaD1, 300], this, 'yiFrameA1')
-    .to('#frame-2', .3, {fill:'#D0021B', x:'320', y:'160'}, 'yiFrameA2')
+    .to('#frame-2', .3, {opacity:1, fill:'#D0021B', x:'320', y:'160'}, 'yiFrameA2')
     .call(pathMorph, [snapF2, yiFaD2, 300], this, 'yiFrameA2')
-    .to('#frame-4', .8, {fill:'#78894E', x:'-50', y:'0'}, 'yiFrameA4a')
+    .to('#frame-4', .8, {opacity:1, fill:'#78894E', x:'-50', y:'0'}, 'yiFrameA4a')
     .call(pathMorph, [snapF4, yiFaD4a, 800], this, 'yiFrameA4a')
     .to('#frame-4', .3, {fill:'#B2CA73'}, 'yiFrameA4')
     .call(pathMorph, [snapF4, yiFaD4, 300], this, 'yiFrameA4')
@@ -259,23 +264,24 @@ ready(function(){
     .call(pathMorph, [snapF4, yiFbD2, 500], this, 'yiFrameB')
     .to('#line-1', .5, {opacity:1, x:'37', y:'-22'}, 'yiLine1')
     .call(pathMorph, [snapL1, yiLD1, 500], 'yiLine1')
-    .from('#yi-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#yi-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'37', y:'-22'}, 'yi-line-2')
     .call(pathMorph, [snapL2, yiLD2, 500], 'yi-line-2')
-    .from('#yi-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#yi-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'37', y:'-22'}, 'yi-line-4')
     .call(pathMorph, [snapL4, yiLD4, 500], 'yi-line-4')
-    .from('#yi-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#yi-p', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#yi-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#yi-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
   lai
-    .to('#frame-1', .5, {fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA1')
+    .to('#frame-1', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA1')
     .call(pathMorph, [snapF1, laiFaD1, 500], this, 'laiFrameA1')
-    .to('#frame-2', .5, {fill:'#d8d8d8', opacity:1, x:'-80', y:'0'}, 'laiFrameA2')
+    .to('#frame-2', .5, {opacity:1, fill:'#d8d8d8', opacity:1, x:'-80', y:'0'}, 'laiFrameA2')
     .call(pathMorph, [snapF2, laiFaD2, 500], this, 'laiFrameA2')
-    .to('#frame-3', .5, {fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA3')
+    .to('#frame-3', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA3')
     .call(pathMorph, [snapF3, laiFaD3, 500], this, 'laiFrameA3')
-    .to('#frame-4', .5, {fill:'#4A4A4A', opacity:1, x:-80, y:0}, 'laiFrameA4')
+    .to('#frame-4', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:-80, y:0}, 'laiFrameA4')
     .call(pathMorph, [snapF4, laiFaD4, 500], this, 'laiFrameA4')
     .staggerTo(['#cross-1', '#cross-3'], 0.5, {opacity:1, x:'0', y:'11'}, .2)
     .staggerTo(['#cross-1', '#cross-3'], 0.5, {opacity:0, delay: .8})
@@ -289,25 +295,26 @@ ready(function(){
     .call(pathMorph, [snapF4, laiFbD4, 500], this, 'laiFrameB')
     .to('#line-1', .5, {opacity:1, x:'-30', y:'-8'}, 'laiLine1')
     .call(pathMorph, [snapL1, laiLD1, 500], 'laiLine1')
-    .from('#lai-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#lai-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'-10', y:'-12'}, 'lai-line-2')
     .call(pathMorph, [snapL2, laiLD2, 500], 'lai-line-2')
     .to('#line-3', .5, {opacity:1, x:'-20', y:'0'}, 'lai-line-2')
     .call(pathMorph, [snapL3, laiLD3, 500], 'lai-line-2')
-    .from('#lai-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#lai-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'-20', y:'-15'}, 'lai-line-4')
     .call(pathMorph, [snapL4, laiLD4, 500], 'lai-line-4')
-    .from('#lai-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#lai-p', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#lai-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#lai-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p', '#cross-1', '#cross-3', '#line-3'], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
  chuan
-    .to('#frame-1', .5, {fill:'#15161E', x:'-293', y:'-4'}, 'chuanFrameA')
+    .to('#frame-1', .5, {opacity:1, fill:'#15161E', x:'-293', y:'-4'}, 'chuanFrameA')
     .call(pathMorph, [snapF1, chuanFaD1, 500], this, 'chuanFrameA')
-    .to('#frame-2', .5, {fill:'#815C20', x:'-69', y:'-18'}, 'chuanFrameA')
+    .to('#frame-2', .5, {opacity:1, fill:'#815C20', x:'-69', y:'-18'}, 'chuanFrameA')
     .call(pathMorph, [snapF2, chuanFaD2, 500], this, 'chuanFrameA')
-    .to('#frame-3', .5, {fill:'#815C20', x:'-69', y:'-18'}, 'chuanFrameA')
+    .to('#frame-3', .5, {opacity:1, fill:'#815C20', x:'-69', y:'-18'}, 'chuanFrameA')
     .call(pathMorph, [snapF3, chuanFaD3, 500], this, 'chuanFrameA')
-    .to('#frame-4', .5, {fill:'#815C20', x:'-69', y:'-18'}, 'chuanFrameA')
+    .to('#frame-4', .5, {opacity:1, fill:'#815C20', x:'-69', y:'-18'}, 'chuanFrameA')
     .call(pathMorph, [snapF4, chuanFaD4, 500], this, 'chuanFrameA')
     .staggerTo('#ship path', .5, {opacity:1, x:'0', y:'0'}, .2)
     .staggerTo('#animals path', 1, {opacity:1, x:'0', y:'0'}, .2)
@@ -326,68 +333,45 @@ ready(function(){
     .call(pathMorph, [snapF4, chuanFbD4, 500], this, 'chuanFrameB')
     .to('#line-1', .5, {opacity:1, x:'-30', y:'-8'}, 'chuanLine1')
     .call(pathMorph, [snapL1, chuanLD1, 500], 'chuanLine1')
-    .from('#chuan-text-1', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#chuan-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-2', .5, {opacity:1, x:'-10', y:'-12'}, 'chuan-line-2')
     .call(pathMorph, [snapL2, chuanLD2, 500], 'chuan-line-2')
-    .from('#chuan-text-2', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#chuan-text-2', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .to('#line-4', .5, {opacity:1, x:'-50', y:'-65'}, 'chuan-line-4')
-    .from('#chuan-title', .8, {opacity:0, x:-20, rotationX:-120})
-    .from('#chuan-p', .8, {opacity:0, x:-20, rotationX:-120})
+    .fromTo('#chuan-title', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .fromTo('#chuan-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
+    .staggerTo(['#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p', '#animals path', '#ship path', '#sea-f', '#sea-b', '#wave-l path', '#wave-r path'], .5, {opacity:0, x:0, y:0, delay: 2})
     ;
 
-  // hanzi
-  //   .add(tian)
-  //   .add(jin)
-  //   .add(lan)
-  //   .add(zui)
-  //   .add(duo)
-  //   .add(yi)
-  //   .add(lai)
-  //   .add(chuan)
-  //   ;
-
-  var countCurrent = 1,
-      countNext = 1;
-
-  function tlPause (){
-    switch(countCurrent) {
+  var count = 0,
+      countC = 1;
+  function tlPlay() {
+    switch (countC) {
       case 1:
-        tian.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0})
+        tian.seek(tian.duration());
         break;
       case 2:
-        jin.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p'], .5, {opacity:0})
+        jin.seek(jin.duration());
         break;
       case 3:
-        lan.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p'], .5, {opacity:0})
+        lan.seek(lan.duration());
         break;
       case 4:
-        zui.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title', '#zui-p'], .5, {opacity:0})
+        zui.seek(zui.duration());
         break;
       case 5:
-        duo.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p'], .5, {opacity:0})
+        duo.seek(duo.duration());
         break;
       case 6:
-        yi.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0})
+        yi.seek(yi.duration());
         break;
       case 7:
-        lai.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p'], .5, {opacity:0})
+        lai.seek(lai.duration());
         break;
       case 8:
-        chuan.pause();
-        TweenLite.to(['#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p'], .5, {opacity:0})
-        break;
+        chuan.seek(chuan.duration());
     }
-  }
-  
-  function tlPlay (){
-    switch(countNext) {
+    switch (count) {
       case 1:
         tian.play();
         break;
@@ -411,98 +395,12 @@ ready(function(){
         break;
       case 8:
         chuan.play();
-        break;
     }
   }
-  
-  function prev(){
-    countCurrent = countNext;
-    if ( countCurrent > 1 ) {
-      countNext -= 1;
-    } else {
-      countNext = 8;
-    }
-    tlPause();
-    tlPlay();
-    var value = countCurrent + "," + countNext;
-    console.log(value);
-  }
-
-  function next() {
-    countCurrent = countNext;
-    if ( countCurrent < 8 ) {
-      countNext += 1;
-    } else {
-      countNext = 1;
-    }
-    tlPause();
-    tlPlay();
-  }
-
-  k('.next').click(function (){
-    next();
-  });
-
-  k('.prev').click(function (){
-    prev();
-  });
-
   k('.pagination span').click(function (){
-    countNext = k.index( k('.pagination span'), k(this)[0] ) + 1;
-    tlPause();
+    countC = count;
+    count = k.index( k('.pagination span'), k(this)[0] ) + 1;
     tlPlay();
   });
 
-  document.onkeydown = function(e) {
-    switch (e.keyCode) {
-      case 37:
-        prev();
-        break;
-      case 38:
-        prev();
-        break;
-      case 39:
-        next();
-        break;
-      case 40:
-        next();
-        break;
-    }
-  };
-
-  // var txtContainer = $("#quote"),
-	// 	  txt;
-	//
-  // function splitText(phrase) {
-	// 	  var prevLetter, sentence,
-  //       sentence = phrase.split("");
-  //   $.each(sentence, function(index, val) {
-  //     if(val === " "){
-  //       val = "&nbsp;";
-  //     }
-  //     var letter = $("<div/>", {
-	// 					  id : "txt" + index
-	// 		   }).addClass('txt').html(val).appendTo(txtContainer);
-	//
-  //     if(prevLetter) {
-	// 			    $(letter).css("left", ($(prevLetter).position().left + $(letter).width()) + "px");
-	// 		    };
-	// 		    prevLetter = letter;
-	// 	    });
-  //   txt = $(".txt");
-  // }
-	//   
-	// function buildTimeline() {
-	// 	TweenLite.set(txtContainer, {css:{perspective:500}});
-	// 	
-	// 	var tl2 = new TimelineLite();
-	// 	tl2.staggerFrom(txt, 0.4, {alpha:0}, 0.06, "textEffect");
-	// 	tl2.staggerFrom(txt, 0.8, {rotationX:"120deg", top:20, transformOrigin: "50% 50% -20", ease:Back.easeOut}, 0.06, "textEffect");
-	// } 
-	//  
-	// function init() {
-  //   splitText("We Hope You Enjoyed the Tour");
-  //   buildTimeline();
-  // } 	 
-	// init();
 });
