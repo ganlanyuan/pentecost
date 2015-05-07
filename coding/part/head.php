@@ -29,7 +29,7 @@
 	<!-- <link href="http://mydomain.com/my-next-page.htm" rel="prerender"> -->
 
 	<!-- css -->
-	<link href="https://fontastic.s3.amazonaws.com/MSJHPuJFXkve8cKEDAVMKT/icons.css" rel="stylesheet">
+  <link href="https://fontastic.s3.amazonaws.com/gt9yi58WSdwScocc4xjfhM/icons.css" rel="stylesheet">  
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'> 
 	<link rel="stylesheet" href="assets/css/hanzi.css">
 
