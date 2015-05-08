@@ -6,6 +6,11 @@
 
 <div class="container">
   <div class="main">
+  <div class="top">
+    <div id="title">Miraculous Chinese Characters</div>
+    <div id="quote"></div>
+  </div>
+  <div id="toggle">Play</div>
   <!-- svg start -->
 <svg width="1024px" height="768px" viewBox="0 0 1024 768" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.1 (12005) - http://www.bohemiancoding.com/sketch -->
@@ -261,12 +266,28 @@
     </g>
 </svg>
   <!-- svg end -->
-  <div id="quote"></div>
   </div>
 </div>
-<div id="restart">Restart</div>
-<div id="toggle">Play</div>
-
+<!-- <div class="container">
+   <nav class="nav">
+     <ul>
+      <li><span class="ic-angle-left"></span></li>
+      <li><span class="ic-angle-right"></span></li>
+      <li class="prev"><span class="ic-angle-left"></span></li>
+      <li class="next"><span class="ic-angle-right"></span></li>
+     </ul>
+   </nav>
+  <div class="pagination">
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span>
+    <span>7</span>
+    <span>8</span>
+  </div>
+</div> -->
 <?php include 'part/footer.php'; ?>
 </body>
 </html>

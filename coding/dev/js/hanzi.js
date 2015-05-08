@@ -1,6 +1,7 @@
 // @codekit-prepend "lib/Modernizr.js"
 // @codekit-prepend "../../bower_components/snap.svg/dist/snap.svg-min.js"
 // @codekit-prepend "../../bower_components/gsap/src/minified/TweenLite.min.js"
+// @codekit-prepend "../../bower_components/gsap/src/minified/easing/EasePack.min.js"
 // @codekit-prepend "../../bower_components/gsap/src/minified/TimelineLite.min.js"
 // @codekit-prepend "../../bower_components/gsap/src/minified/plugins/cssPlugin.min.js"
 // @codekit-prepend "../../bower_components/rocket/src/js/kit.js"
@@ -98,6 +99,11 @@ ready(function(){
     seaF = "M108.480469,93.8135619 C154.980469,73.9151242 189.914062,45.6260623 230.113281,83.4580923 C249.709741,101.900587 323.766634,105.385966 348.90625,87.7940313 C401.417969,51.0479371 415.65625,48.7539063 455.285156,76.458093 C489.926811,100.67574 595.539062,115.660157 645.210938,96.2080938 C685.864379,80.2877498 790.863281,25.598719 852.078125,72.0713747 C889.463876,100.453627 923.517828,100.937089 979.078125,83.4580929 C1012.79297,72.8515692 1025,72.8515694 1025,72.8515694 L1025,351.500007 L0.7109375,351.500007 L0.7109375,72.8515694 C0.7109375,72.8515694 53.5115125,117.336064 108.480469,93.8135619 Z",
     seaB2 = "M63.25,118.828124 C109.75,98.9296866 131.453125,79.9151242 187.746094,106.208095 C224.97775,123.598026 312.692415,141.791152 337.832031,124.199218 C390.34375,87.4531238 441.025714,74.42637 477.695312,102.458093 C512.855469,129.335937 584.640625,126.385657 634.3125,106.933593 C674.965942,91.013249 796.035156,55.9854371 857.25,102.458093 C894.635751,130.840345 966.574219,113.445312 992.972656,97.519531 C1018.32639,82.2240025 1025,91.0781209 1025,91.0781209 L1025,370.500011 L0.7109375,370.500011 L0.7109375,91.0781209 C0.7109375,91.0781209 8.28104377,142.350626 63.25,118.828124 Z",
     seaF2 = "M108.480469,112.813562 C154.980469,92.9151242 189.914062,64.6260623 230.113281,102.458092 C249.709741,120.900587 323.766634,124.385966 348.90625,106.794031 C401.417969,70.0479371 415.65625,67.7539063 455.285156,95.458093 C489.926811,119.67574 595.539062,134.660157 645.210938,115.208094 C685.864379,99.2877498 790.863281,44.598719 852.078125,91.0713747 C889.463876,119.453627 923.517828,119.937089 979.078125,102.458093 C1012.79297,91.8515692 1025,91.8515694 1025,91.8515694 L1025,370.500007 L0.7109375,370.500007 L0.7109375,91.8515694 C0.7109375,91.8515694 53.5115125,136.336064 108.480469,112.813562 Z",
+    F = "M121,19.5 C122.439259,19.5 123,18.6045695 123,17.5 C123,16.3954305 122.440263,15.5 121,15.5 C119.559737,15.5 119,16.3954305 119,17.5 C119,18.6045695 119.560741,19.5 121,19.5 Z",
+    L1 = "M355.5,25.5 L359.5,25.5",
+    L2 = "M372.482759,145.5 L376.482759,145.5",
+    L3 = "M283.722656,114.513119 L286.737499,117.141944",
+    L4 = "M124.345926,340.348036 L124.345926,344.348036",
     abc = "";
 
   function pathMorph (path, data, dur) {
@@ -105,6 +111,7 @@ ready(function(){
   }
 
   var hanzi = new TimelineLite( {paused:true} ),
+      start = new TimelineLite(),
       tian = new TimelineLite(),
       jin = new TimelineLite(),
       lan = new TimelineLite(),
@@ -113,6 +120,41 @@ ready(function(){
       yi = new TimelineLite(),
       lai = new TimelineLite(),
       chuan = new TimelineLite();
+
+  var txtContainer, txt;
+
+  function splitText(obj, phrase) {
+		  var prevLetter, sentence,
+        sentence = phrase.split(" ");
+    $.each(sentence, function(index, val) {
+      // if(val === " "){
+      //   val = "&nbsp;";
+      // }
+      var valN = val + "&nbsp;";
+      var letter = $("<div/>", {
+						  id : "txt" + index
+			   }).addClass('txt').html(valN).appendTo($(obj));
+
+      // if(prevLetter) {
+				    // $(letter).css("left", ($(prevLetter).position().left + $(letter).width()) + "px");
+			    // };
+			    // prevLetter = letter;
+		    });
+    txt = $(".txt");
+  }
+
+	function init(txtC, phrase) {
+    splitText(txtC, phrase);
+		TweenLite.set($(txtC), {css:{perspective:500}});
+
+		var tl2 = new TimelineLite();
+		tl2.staggerFrom(txt, .8, {alpha:0}, .1, "textEffect");
+		tl2.staggerFrom(txt, 1.6, {rotationX:"150deg", top:30, transformOrigin: "50% 50% -30", ease:Back.easeOut}, .1, "textEffect");
+  } 	 
+
+  start
+    .call(init, ['#quote', 'Chinese characters are miraculous. You can find biblical history in them. See following examples:'])
+    .to('#toggle', .5, {opacity:1, delay: 2})
 
   tian
     .from('#frame-1', .5, {scale:0, y:200, rotation:-30}, 'tian-frame-1')
@@ -129,7 +171,9 @@ ready(function(){
     .call(pathMorph, [snapL4, tianLD4, 500], this, 'tian-line-4')
     .fromTo('#tian-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#tian-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0, x:0, y:0, rotation:0, delay:2})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#tian-text-1', '#tian-text-2', '#tian-title', '#tian-p'], .5, {opacity:0, x:0, y:0, rotation:0, delay:2}, 'tian-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'tian-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'tian-out')
     ;
   jin
     .to('#frame-1', .5, {opacity:1, fill:'#EAA739', x:'-130', y:'-80'}, 'jin-frame-a')
@@ -161,7 +205,10 @@ ready(function(){
     .call(pathMorph, [snapL4, jinLD4, 500], this, 'jin-line-4')
     .fromTo('#jin-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#jin-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', '#jin-dash path', '#jin-letter1', '#jin-letter2', '#jin-letter3'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#jin-text-1', '#jin-text-2', '#jin-title', '#jin-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', '#jin-dash path', '#jin-letter1', '#jin-letter2', '#jin-letter3'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3}, 'jin-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'jin-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'jin-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'jin-out')
     ;
   lan
     .to('#frame-1', .5, {opacity:1, fill:'#EAA739', x:'-130', y:'-80'}, 'lan-frame-a')
@@ -193,7 +240,11 @@ ready(function(){
     .call(pathMorph, [snapL4, lanLD4, 500], this, 'lan-line-4')
     .fromTo('#lan-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#lan-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', ], .5, {opacity:0, x:0, y:0, rotation:0, delay:3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#lan-text-1', '#lan-text-2', '#lan-title', '#lan-p', '#fruit-a path', '#fruit-b path', '#leaves-1', '#leaves-2', ], .5, {opacity:0, x:0, y:0, rotation:0, delay:3}, 'lan-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'lan-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'lan-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'lan-out')
+    // .call(pathMorph, [snapF4, F, 500], this, 'lan-out')
     ;
   zui
     .to('#frame-1', .5, {opacity:1, fill:'#fff', x:'-30', y:'0'}, 'zuiFrameA')
@@ -216,7 +267,10 @@ ready(function(){
     .call(pathMorph, [snapL4, zuiLD4, 500], 'zui-line-4')
     .fromTo('#zui-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#zui-p', 1.2, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title', '#zui-p'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#zui-text-1', '#zui-text-2', '#zui-title', '#zui-p'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3}, 'zui-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'zui-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'zui-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'zui-out')
     ;
   duo
     .to('#frame-1', .5, {opacity:1, fill:'#D8D8D8', x:'0', y:'0'}, 'duoFrameA')
@@ -247,7 +301,11 @@ ready(function(){
     .call(pathMorph, [snapL4, duoLD4, 500], 'duo-line-4')
     .fromTo('#duo-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#duo-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p', '#fruit-c path', '#duo-man-line2'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#duo-text-1', '#duo-text-2', '#duo-title', '#duo-p', '#fruit-c path', '#duo-man-line2'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3}, 'duo-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'duo-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'duo-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'duo-out')
+    // .call(pathMorph, [snapF4, F, 500], this, 'duo-out')
     ;
   yi
     .to('#frame-3', .8, {opacity:1, fill:'#fff', x:'-50', y:'0'}, 'yiFrameA3')
@@ -275,7 +333,11 @@ ready(function(){
     .call(pathMorph, [snapL4, yiLD4, 500], 'yi-line-4')
     .fromTo('#yi-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#yi-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#yi-text-1', '#yi-text-2', '#yi-title', '#yi-p'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3}, 'yi-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'yi-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'yi-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'yi-out')
+    // .call(pathMorph, [snapF4, F, 500], this, 'yi-out')
     ;
   lai
     .to('#frame-1', .5, {opacity:1, fill:'#4A4A4A', opacity:1, x:'-80', y:'0'}, 'laiFrameA1')
@@ -308,7 +370,11 @@ ready(function(){
     .call(pathMorph, [snapL4, laiLD4, 500], 'lai-line-4')
     .fromTo('#lai-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#lai-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p', '#cross-1', '#cross-3', '#line-3'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#lai-text-1', '#lai-text-2', '#lai-title', '#lai-p', '#cross-1', '#cross-3', '#line-3'], .5, {opacity:0, x:0, y:0, rotation:0, delay:3}, 'lai-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'lai-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'lai-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'lai-out')
+    // .call(pathMorph, [snapF4, F, 500], this, 'lai-out')
     ;
  chuan
     .to('#frame-1', .5, {opacity:1, fill:'#15161E', x:'-293', y:'-4'}, 'chuanFrameA')
@@ -345,7 +411,11 @@ ready(function(){
     .call(pathMorph, [snapL4, laiLD4, 500], 'lai-line-4')
     .fromTo('#chuan-title', .8, {opacity:0, fill:'#E1300A', x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
     .fromTo('#chuan-p', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p'], .5, {opacity:0, x:0, y:0, delay: 3})
+    .staggerTo(['#frame-1', '#frame-2', '#frame-3', '#frame-4', '#line-1', '#line-2', '#line-3', '#line-4', '#chuan-text-1', '#chuan-text-2', '#chuan-title', '#chuan-p'], .5, {opacity:0, x:0, y:0, delay: 3}, 'chuan-out')
+    // .call(pathMorph, [snapF1, F, 500], this, 'chuan-out')
+    // .call(pathMorph, [snapF2, F, 500], this, 'chuan-out')
+    // .call(pathMorph, [snapF3, F, 500], this, 'chuan-out')
+    // .call(pathMorph, [snapF4, F, 500], this, 'chuan-out')
     ;
 
   hanzi
@@ -360,6 +430,9 @@ ready(function(){
     ;
 
   pauseBtn.click(function() {
+    TweenLite.to('.top', .5, {opacity:0, height:'0px'});
+    k('#toggle').addClass('fixed');
+
     hanzi.paused(!hanzi.paused());
     if ( hanzi.paused() ) {
       pauseBtn.html('Play');
