@@ -55,12 +55,13 @@ svg { width: 100% !important; height: auto !important; }
 }
 $width: 80px;
 $height: 40px;
-#restart {
-  position: fixed;
-  left: 50%;
-  top: 43%;
-  margin-left: (- $width / 2);
+#toggle {
+  // position: fixed;
+  // left: 50%;
+  // top: 43%;
+  // margin-left: (- $width / 2);
   // margin-top: (- $height / 2);
+  margin: 20px auto;
   width: $width;
   height: $height;
   line-height: $height;
@@ -72,16 +73,45 @@ $height: 40px;
 // hide elements
 // #frame-1,
 // #frame-2,
+#tian-text-1,
+#tian-text-2,
+#tian-title,
+#tian-p,
+#jin-text-1,
+#jin-text-2,
+#jin-title,
+#jin-p,
+#lan-text-1,
+#lan-text-2,
+#lan-title,
+#lan-p,
+#zui-text-1,
+#zui-text-2,
+#zui-title,
+#zui-p,
+#duo-text-1,
+#duo-text-2,
+#duo-title,
+#duo-p,
+#yi-text-1,
+#yi-text-2,
+#yi-title,
+#yi-p,
+#lai-text-1,
+#lai-text-2,
+#lai-title,
+#lai-p,
+#chuan-text-1,
+#chuan-text-2,
+#chuan-title,
+#chuan-p,
+
 #frame-3,
 #frame-4,
 #line-1,
 #line-2,
 #line-3,
 #line-4,
-// #tian-text-1,
-// #tian-text-2,
-// #tian-title,
-// #tian-p,
 #leaves-1,
 #leaves-2,
 #fruit-a path,
@@ -91,43 +121,14 @@ $height: 40px;
 #jin-letter1,
 #jin-letter2,
 #jin-letter3,
-// #jin-text-1,
-// #jin-text-2,
-// #jin-title,
-// #jin-p,
-// #lan-text-1,
-// #lan-text-2,
-// #lan-title,
-// #lan-p,
-// #zui-text-1,
-// #zui-text-2,
-// #zui-title,
-// #zui-p,
 #duo-man-line2,
-// #duo-text-1,
-// #duo-text-2,
-// #duo-title,
-// #duo-p,
 #cross-1,
 #cross-3,
-// #yi-text-1,
-// #yi-text-2,
-// #yi-title,
-// #yi-p,
-// #lai-text-1,
-// #lai-text-2,
-// #lai-title,
-// #lai-p,
 #sea-f,
 #sea-b,
 #wave-r path,
 #wave-l path,
 #animals path,
 #ship path,
-// #chuan-text-1,
-// #chuan-text-2,
-// #chuan-title,
-// #chuan-p,
-// [id^='chuan-']
 #restart,
 { opacity: 0; }

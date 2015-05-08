@@ -43,5 +43,5 @@
 		<script src="assets/cross-domain/respond.proxy.js"></script>	
 	<![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="assets/js/hanzi.min.js"></script>
+	<script src="assets/js/hanzi.js"></script>
 </head>
