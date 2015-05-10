@@ -1,4 +1,4 @@
-// @codekit-prepend "lib/Modernizr.js"
+// codekit-prepend "lib/Modernizr.js"
 // @codekit-prepend "../../bower_components/snap.svg/dist/snap.svg-min.js"
 // @codekit-prepend "../../bower_components/gsap/src/minified/TweenLite.min.js"
 // @codekit-prepend "../../bower_components/gsap/src/minified/easing/EasePack.min.js"
@@ -157,12 +157,12 @@ ready(function(){
     .to('#toggle', .5, {opacity:1, delay: 2})
 
   tian
-    .from('#frame-1', .5, {scale:0, y:200, rotation:-30}, 'tian-frame-1')
+    .fromTo('#frame-1', .5, {opacity:0, scale:0, y:200, rotation:-30}, {opacity:1, scale:1, y:0, rotation:0}, 'tian-frame-1')
     .call(pathMorph, [snapF1, tianFD1, 500], this, 'tian-frame-1')
     .to('#line-1', .5, {opacity:1, x:11, y:0}, 'tian-line-1')
     .call(pathMorph, [snapL1, tianLD1, 500], this, 'tian-line-1')
     .fromTo('#tian-text-1', .8, {opacity:0, x:-20, rotationX:-120}, {opacity:1, x:0, rotationX:0})
-    .from('#frame-2', .5, {scale:50, y:-1000, rotation:-30}, 'tian-frame-2')
+    .fromTo('#frame-2', .5, {opacity:0, scale:50, y:-1000, rotation:-30}, {opacity:1, scale:1, y:0, rotation:0}, 'tian-frame-2')
     .call(pathMorph, [snapF2, tianFD2, 500], this, 'tian-frame-2')
     .to('#line-2', .5, {opacity:1, x:11, y:0}, 'tian-line-2')
     .call(pathMorph, [snapL2, tianLD2, 500], this, 'tian-line-2')
