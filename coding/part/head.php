@@ -1,3 +1,7 @@
+<?php
+  $file = basename($_SERVER['PHP_SELF']);
+  $pagename = str_replace(".php","",$file); 
+?>
 <!doctype html>
 <!--[if lt IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
 <!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="en"><![endif]-->
@@ -8,7 +12,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
 	<!-- <meta http-equiv="cleartype" content="on"> -->
-	<title>Hanzi</title>
+	<title><?php
+		if ($pagename == 'hanzi') { echo "Hanzi"; }
+		if ($pagename == 'newcreation') { echo "New Creation"; }
+	?></title>
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<meta name="HandheldFriendly" content="True">
@@ -31,7 +38,10 @@
 	<!-- css -->
   <link href="https://fontastic.s3.amazonaws.com/gt9yi58WSdwScocc4xjfhM/icons.css" rel="stylesheet">  
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,700' rel='stylesheet' type='text/css'> 
-	<link rel="stylesheet" href="assets/css/hanzi.css">
+	<link rel="stylesheet" href="assets/css/<?php 
+		if ($pagename == 'hanzi') { echo 'hanzi'; } 
+		if ($pagename == 'newcreation') { echo 'newcreation'; } 
+	?>.css">
 
 	<!-- javascript -->
 	<!--[if (lt IE 9)]>
@@ -43,5 +53,8 @@
 		<script src="assets/cross-domain/respond.proxy.js"></script>	
 	<![endif]-->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script src="assets/js/hanzi.js"></script>
+	<script src="assets/js/<?php 
+		if ($pagename == 'hanzi') { echo 'hanzi'; }
+		if ($pagename == 'newcreation') { echo 'newcreation'; }
+	?>.js"></script>
 </head>

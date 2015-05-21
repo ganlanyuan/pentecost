@@ -36,6 +36,7 @@
 		<span>8</span>
 	</div>
 </div> -->
+Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here! - 2 Corinthians 5:17
 <?php include 'part/footer.php'; ?>
 </body>
 </html>
