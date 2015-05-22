@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+// SASS Tools
+@import "../../bower_components/bourbon/app/assets/stylesheets/_bourbon.scss"; 
+
+// global setting
+@import "setting/variables"; 
+@import "setting/placeholders";
+
+// frameworks
+@import "../../bower_components/inuit-normalize.css/generic.normalize"; // css reset
+// @import "owl-carousel2"; // slidershow
+// @import "animate";
+// @import "fontawesome"; // icon font
+@import "../../bower_components/rocket/src/scss/_rocket.scss";  // template
+
+// individual pages
+@import "common";
+
+// media query
+@import "mq";
+
+// common style
+html { font-family: $ff-o; }
+body { background-color: #E0E9DA; }
+svg { width: 100% !important; height: auto !important; }
+.container {
+  // @include container(em(1200), em(20));
+}
+.no-inlinesvg svg { display: none; }
+
+#quote,
+#title {
+  max-width: 36em;
+  padding-top: 1em;
+  margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+#title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+#quote {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: -12em;
+}
+.txt {
+  position: relative;
+  display: inline-block;
+}
+
+// hide elements
+#frame-1,
+#frame-1
+{ opacity: 0; }
+
+
