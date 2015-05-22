@@ -46,9 +46,11 @@ ready(function(){
 	var newcreation = new TimelineLite(),
 			drawBottle = new TimelineLite(),
 			virusRun = new TimelineLite(),
+			darkRun = new TimelineLite(),
 			fire = new TimelineLite(),
 			rain = new TimelineLite(),
 			drawStem = new TimelineLite(),
+			lightRun = new TimelineLite(),
 			end = new TimelineLite();
 
 
@@ -69,10 +71,8 @@ ready(function(){
 		.call(draw, ['#bottle1', '#fff', 3])
 		.call(draw, ['#bottle2', '#fff', 3])
 		;
-// envy, murder, strife, deceit, malice, gossip, slanderer, God-hater, insolent, arrogant, boastful
- // love, joy, peace, forbearance, kindness, goodness, faithfulness, gentleness, self-control
 
-	run = function (name) {
+	run = function (name, time, thisEase) {
 		var thisPath = name + '-path',
 				thisId = '#' + name,
 				data = Snap.path.toCubic(document.getElementById(thisPath).getAttribute('d'))
@@ -96,34 +96,82 @@ ready(function(){
 		  }
 		}
 		TweenLite.set(thisId, {x:points[0].x, y:points[0].y});
-		var tween = TweenLite.to(thisId, 2.5, {bezier:{type:"cubic", values:points, autoRotate:true}, ease:Bounce.easeOut, force3D:true});
+		var tween = TweenLite.to(thisId, time, {bezier:{type:"cubic", values:points, autoRotate:true}, ease:thisEase, force3D:true});
 	}
 
 	virusRun
-		.from('#virus1', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, 'virus')
-		.call(run, ['virus1'], this, 'virus')
-		.from('#virus2', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus2'], this, '-=2.5')
-		.from('#virus3', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus3'], this, '-=2.5')
-		.from('#virus4', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus4'], this, '-=2.5')
-		.from('#virus5', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus5'], this, '-=2.5')
-		.from('#virus6', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus6'], this, '-=2.5')
-		.from('#virus7', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus7'], this, '-=2.5')
-		.from('#virus8', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus8'], this, '-=2.5')
-		.from('#virus9', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus9'], this, '-=2.5')
-		.from('#virus10', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus10'], this, '-=2.5')
-		.from('#virus11', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus11'], this, '-=2.5')
-		.from('#virus12', 2.5, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.4')
-		.call(run, ['virus12'], this, '-=2.5')
+		.from('#virus1', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, 'virus')
+		.call(run, ['virus1', 3, 'Bounce.easeOut'], this, 'virus')
+		.from('#virus2', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus2', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus3', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus3', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus4', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus4', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus5', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus5', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus6', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus6', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus7', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus7', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus8', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus8', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus9', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus9', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus10', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus10', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus11', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus11', 3, 'Bounce.easeOut'], this, '-=3')
+		.from('#virus12', 3, {opacity:0, scale:0, ease:Bounce.easeOut}, '-=2.8')
+		.call(run, ['virus12', 3, 'Bounce.easeOut'], this, '-=3')
+		;
+
+	darkRun
+		.from('#dark1', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark')
+		.to('#dark1', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark1', 2, 'SlowMo.easeOut'], this, 'dark')
+		.from('#dark2', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark2', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark2', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark3', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark3', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark3', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark4', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark4', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark4', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark5', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark5', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark5', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark6', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark6', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark6', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark7', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark7', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark7', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark8', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark8', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark8', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark9', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark9', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark9', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark10', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark10', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark10', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark11', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark11', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark11', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark12', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark12', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark12', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark13', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark13', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark13', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark14', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark14', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark14', 2, 'SlowMo.easeOut'], this, '-=3.2')
+		.from('#dark15', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.to('#dark15', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
+		.call(run, ['dark15', 2, 'SlowMo.easeOut'], this, '-=3.2')
 		;
 
 	fireRun = function (name) {
@@ -157,7 +205,7 @@ ready(function(){
 		.call(fireRun, ['fire'], this, 'fire')
 		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {fill:'#ff8900'}, 0.1)
 		.to('#fire', .5, {opacity:0, scale:0}, '-=0.5')
-		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {fill:'#000', scale:0}, 'virusDown')
+		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {fill:'#000', scale:0.3}, 'virusDown')
 		;
 
 	rain
@@ -172,7 +220,8 @@ ready(function(){
 		.call(pathMorph, [snapRain8, rain8, 2000], this, 'rain')
 		.call(pathMorph, [snapRain9, rain9, 2000], this, 'rain')
 		.call(pathMorph, [snapRain10, rain10, 2000], this, 'rain')
-		.staggerTo(['#rain1', '#rain2', '#rain3', '#rain4', '#rain5', '#rain6', '#rain7', '#rain8', '#rain9', '#rain10', ], 1, {opacity:0, delay:3})
+		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {scale:0, delay:3}, 'virusDown')
+		.staggerTo(['#rain1', '#rain2', '#rain3', '#rain4', '#rain5', '#rain6', '#rain7', '#rain8', '#rain9', '#rain10', ], 1, {opacity:0})
 		.from('#water', 1, {opacity:0})
 		;
 
@@ -183,6 +232,30 @@ ready(function(){
 		.call(draw, ['#stem2', '#8fb062', 1], this, 'stem2')
 		.staggerFrom('#leaf path', 0.5, {opacity:0}, 0.2)
 		.staggerFrom(['#flower1', '#flower2'], 1.2, {opacity:0}, 0.2)
+		;
+
+	lightRun
+		.from('#light1', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'light')
+		.call(run, ['light1', 2, 'SlowMo.easeOut'], this, 'light')
+		.from('#light2', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light2', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light3', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light3', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light4', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light4', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light5', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light5', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light6', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light6', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light7', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light7', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light8', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light8', 2, 'SlowMo.easeOut'], this, '-=2')
+		.from('#light9', 2, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.call(run, ['light9', 2, 'SlowMo.easeOut'], this, '-=2')
+		.staggerTo(['#light1', '#light2', '#light3', '#light4', '#light5', '#light6', '#light7', '#light8', '#light9'], 1, {opacity:0, scale:0})
+		.from('#butterfly', 2, {opacity:0, scale:0, ease:SlowMo.easeOut})
+		.call(run, ['butterfly', 2, 'SlowMo.easeOut'], this, '-=2')
 		;
 
 	var txtContainer, txt;
@@ -222,9 +295,11 @@ ready(function(){
 	newcreation
 		.add(drawBottle)
 		.add(virusRun, '+=4')
+		.add(darkRun)
 		.add(fire)
 		.add(rain)
 		.add(drawStem)
+		.add(lightRun)
 		.add(end)
 		;
 
