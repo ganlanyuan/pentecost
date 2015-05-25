@@ -127,51 +127,51 @@ ready(function(){
 		;
 
 	darkRun
-		.from('#dark1', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark')
+		.from('#dark1', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark1')
+		.call(run, ['dark1', 2.5, 'SlowMo.easeOut'], this, 'dark1')
 		.to('#dark1', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark1', 2, 'SlowMo.easeOut'], this, 'dark')
-		.from('#dark2', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark2', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark2')
+		.call(run, ['dark2', 2.5, 'SlowMo.easeOut'], this, 'dark2')
 		.to('#dark2', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark2', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark3', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark3', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark3')
+		.call(run, ['dark3', 2.5, 'SlowMo.easeOut'], this, 'dark3')
 		.to('#dark3', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark3', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark4', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark4', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark4')
+		.call(run, ['dark4', 2.5, 'SlowMo.easeOut'], this, 'dark4')
 		.to('#dark4', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark4', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark5', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark5', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark5')
+		.call(run, ['dark5', 2.5, 'SlowMo.easeOut'], this, 'dark5')
 		.to('#dark5', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark5', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark6', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark6', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark6')
+		.call(run, ['dark6', 2.5, 'SlowMo.easeOut'], this, 'dark6')
 		.to('#dark6', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark6', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark7', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark7', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark7')
+		.call(run, ['dark7', 2.5, 'SlowMo.easeOut'], this, 'dark7')
 		.to('#dark7', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark7', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark8', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark8', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark8')
+		.call(run, ['dark8', 2.5, 'SlowMo.easeOut'], this, 'dark8')
 		.to('#dark8', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark8', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark9', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark9', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark9')
+		.call(run, ['dark9', 2.5, 'SlowMo.easeOut'], this, 'dark9')
 		.to('#dark9', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark9', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark10', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark10', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark10')
+		.call(run, ['dark10', 2.5, 'SlowMo.easeOut'], this, 'dark10')
 		.to('#dark10', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark10', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark11', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark11', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark11')
+		.call(run, ['dark11', 2.5, 'SlowMo.easeOut'], this, 'dark11')
 		.to('#dark11', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark11', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark12', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark12', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark12')
+		.call(run, ['dark12', 2.5, 'SlowMo.easeOut'], this, 'dark12')
 		.to('#dark12', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark12', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark13', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark13', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark13')
+		.call(run, ['dark13', 2.5, 'SlowMo.easeOut'], this, 'dark13')
 		.to('#dark13', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark13', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark14', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark14', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark14')
+		.call(run, ['dark14', 2.5, 'SlowMo.easeOut'], this, 'dark14')
 		.to('#dark14', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark14', 2, 'SlowMo.easeOut'], this, '-=3.2')
-		.from('#dark15', .5, {opacity:0, scale:0, ease:SlowMo.easeOut}, '-=1.8')
+		.from('#dark15', 1.5, {opacity:0, scale:0, ease:SlowMo.easeOut}, 'dark15')
+		.call(run, ['dark15', 2.5, 'SlowMo.easeOut'], this, 'dark15')
 		.to('#dark15', .5, {opacity:0, scale:0, ease:SlowMo.easeOut, delay:1})
-		.call(run, ['dark15', 2, 'SlowMo.easeOut'], this, '-=3.2')
 		;
 
 	fireRun = function (name) {
@@ -198,18 +198,18 @@ ready(function(){
 		  }
 		}
 		TweenLite.set(thisId, {x:points[0].x, y:points[0].y});
-		var tween = TweenLite.to(thisId, 1, {bezier:{type:"cubic", values:points, autoRotate:false}, force3D:true});
+		var tween = TweenLite.to(thisId, 2, {bezier:{type:"cubic", values:points, autoRotate:false}, force3D:true});
 	}
 	fire
-		.from('#fire', 1.5, {opacity:0, scale:0}, 'fire')
+		.from('#fire', 2, {opacity:0, scale:0}, 'fire')
 		.call(fireRun, ['fire'], this, 'fire')
 		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {fill:'#ff8900'}, 0.1)
 		.to('#fire', .5, {opacity:0, scale:0}, '-=0.5')
-		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {fill:'#000', scale:0.3}, 'virusDown')
+		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {fill:'#000', scale:0.3}, 0.1, 'virusDown')
 		;
 
 	rain
-		.staggerFrom(['#rain1', '#rain2', '#rain3', '#rain4', '#rain5', '#rain6', '#rain7', '#rain8', '#rain9', '#rain10', ], 1, {opacity:0}, 'rain')
+		.staggerFrom(['#rain1', '#rain2', '#rain3', '#rain4', '#rain5', '#rain6', '#rain7', '#rain8', '#rain9', '#rain10', ], 1, {opacity:0}, 0.1, 'rain')
 		.call(pathMorph, [snapRain1, rain1, 2000], this, 'rain')
 		.call(pathMorph, [snapRain2, rain2, 2000], this, 'rain')
 		.call(pathMorph, [snapRain3, rain3, 2000], this, 'rain')
@@ -220,8 +220,8 @@ ready(function(){
 		.call(pathMorph, [snapRain8, rain8, 2000], this, 'rain')
 		.call(pathMorph, [snapRain9, rain9, 2000], this, 'rain')
 		.call(pathMorph, [snapRain10, rain10, 2000], this, 'rain')
-		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {scale:0, delay:3}, 'virusDown')
-		.staggerTo(['#rain1', '#rain2', '#rain3', '#rain4', '#rain5', '#rain6', '#rain7', '#rain8', '#rain9', '#rain10', ], 1, {opacity:0})
+		.staggerTo(['#virus1', '#virus2', '#virus3', '#virus4', '#virus5', '#virus6', '#virus7', '#virus8', '#virus9', '#virus10', '#virus11', '#virus12'], .5, {scale:0, opacity:0, delay:3}, 0.1, 'virusDown')
+		.staggerTo(['#rain1', '#rain2', '#rain3', '#rain4', '#rain5', '#rain6', '#rain7', '#rain8', '#rain9', '#rain10', ], 1, {opacity:0}, 0.1)
 		.from('#water', 1, {opacity:0})
 		;
 
@@ -300,7 +300,7 @@ ready(function(){
 		.add(rain)
 		.add(drawStem)
 		.add(lightRun)
-		.add(end)
+		.add(end, '+=1')
 		;
 
 });
